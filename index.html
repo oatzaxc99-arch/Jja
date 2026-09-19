@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DoZa Music</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <header>
+
+        <div>
+            <h1>🎵 DoZa Music</h1>
+            <p>Music Downloader & Playlist</p>
+        </div>
+
+        <div
+            id="keyStatus"
+            class="status locked"
+        >
+            🔒 กำลังเชื่อมต่อ Key
+        </div>
+
+    </header>
+
+
+    <!-- LOGIN -->
+
+    <section
+        id="loginPage"
+        class="card"
+    >
+
+        <h2>🔑 License Key</h2>
+
+        <p class="description">
+            ใส่ Key เพื่อเข้าสู่ระบบ
+        </p>
+
+        <input
+            id="keyInput"
+            type="text"
+            placeholder="เช่น USER-XXXX-XXXX-XXXX"
+            autocomplete="off"
+        >
+
+        <button id="loginBtn">
+            ตรวจสอบ Key
+        </button>
+
+        <p id="loginMessage"></p>
+
+    </section>
+
+
+    <!-- MAIN -->
+
+    <main
+        id="mainPage"
+        class="hidden"
+    >
+
+        <!-- USER -->
+
+        <section class="card user-card">
+
+            <div>
+                <span>ผู้ใช้งาน</span>
+                <strong id="userName">-</strong>
+            </div>
+
+            <div>
+                <span>สิทธิ์</span>
+                <strong id="userRole">-</strong>
+            </div>
+
+            <div>
+                <span>Slot</span>
+                <strong id="userSlot">-</strong>
+            </div>
+
+            <div>
+                <span>หมดอายุ</span>
+                <strong id="userExpire">-</strong>
+            </div>
+
+            <button
+                id="logoutBtn"
+                class="danger"
+            >
+                ออกจากระบบ
+            </button>
+
+        </section>
+
+
+        <!-- ADD SONG -->
+
+        <section class="card">
+
+            <h2>🎵 เพิ่มเพลง</h2>
+
+            <input
+                id="youtubeUrl"
+                type="url"
+                placeholder="วางลิงก์ YouTube..."
+            >
+
+            <button id="addSongBtn">
+                ＋ เพิ่มเข้า Playlist
+            </button>
+
+            <p id="apiMessage"></p>
+
+        </section>
+
+
+        <!-- PLAYLIST -->
+
+        <section class="card">
+
+            <div class="playlist-header">
+
+                <h2>📋 Playlist</h2>
+
+                <button
+                    id="clearBtn"
+                    class="danger"
+                >
+                    ล้างทั้งหมด
+                </button>
+
+            </div>
+
+            <div id="playlist"></div>
+
+            <div
+                id="emptyPlaylist"
+                class="empty"
+            >
+                ยังไม่มีเพลง
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
